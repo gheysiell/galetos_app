@@ -6,15 +6,13 @@ const pedidos = db.sequelize.define('pedidos', {
         autoIncrement: true,
         primaryKey: true
     },
-    descricao: {
+    status: {
+        type: db.Sequelize.BOOLEAN
+    },
+    name: {
         type: db.Sequelize.STRING
-    },
-    quantidade: {
-        type: db.Sequelize.INTEGER
-    },
-    data: {
-        type: db.Sequelize.DATE
     }
-})
+},
+{timestamps: false})
 
 module.exports = pedidos
