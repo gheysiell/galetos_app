@@ -1,0 +1,125 @@
+.left-main-little{
+   display: flex;
+   background: #383838;      
+   flex-direction: column;
+   align-items: center;
+   width: 55px;
+   height: 100%;
+   transition: width .6s ease;
+}
+
+.left-main-big{
+   display: flex;
+   position: absolute;
+   background: #383838;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: flex-start;
+   width: 170px;
+   height: 100%;
+   transition: width .6s ease;
+}
+
+.options-main-little{
+   display: flex;
+   width: 55px;
+   height: 45px;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;      
+   color: #fff;
+   transition: width .6s ease;
+}
+
+.options-main-big{   
+   display: flex;
+   width: 55px;
+   height: 45px;   
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;      
+   color: #fff;
+   transition: width .6s ease;
+}
+
+.options-main-little:hover, .options-main-little:focus {
+   color: #08D6A3;
+}
+
+.container-options-main-little{
+   display: flex;
+   width: 100%;   
+   height: 45px;
+   justify-content: center;
+   align-items: center;
+}
+
+.container-options-main-big{
+   display: flex;
+   width: 100%;   
+   flex-direction: row;
+   height: 45px;
+}
+
+.left-main-icon-little{
+   display: flex;
+   height: 50px;
+   justify-content: center;
+   align-items: center;     
+}
+
+.left-main-icon-big{
+   display: flex;
+   height: 50px;
+   width: 170px;
+   justify-content: center;
+   align-items: center;   
+   background: #525151;
+   transition: background 1s ease; 
+}
+
+.show-left-main-icon{
+   margin-left: 10px;
+   color: #ffd468;
+}
+
+.options-main-icon{
+   color: transparent;
+}
+
+.selected-option{
+   color: "#08D6A3"
+}
+
+.inactive-option{
+   color: "#fff"
+}
+
+.options-main-bottom{
+   position: fixed;
+   bottom: 0;
+}
+
+.hidden{
+   display: none;
+}
+
+.show-options-names{
+   display: flex;
+   position: absolute;
+   height: 45px;
+   flex-grow: 1;
+   justify-content: center;
+   left: 50px;
+   align-items: center;   
+   font-size: 14px;
+   font-weight: 600;
+   color: #fff;
+}
+
+.options-bottom{      
+   position: fixed;   
+   width: 100%;
+   bottom: 0px;
+   color: #fff;
+}
