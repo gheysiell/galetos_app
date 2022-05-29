@@ -1,10 +1,11 @@
 import "./index.css"
 
-export const Content = ({whatClassMain}) => {
+export const Content = (props) => {
    return (
       <div 
-         className={whatClassMain === "little" ? "body-home-little" : "body-home-big"}
+         className={props.whatClassMain === "little" ? "body-home-little" : "body-home-big"}
       >
+         {props.children}
       </div>
    )
 }

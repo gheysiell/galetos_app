@@ -59,6 +59,7 @@
    width: 100%;   
    flex-direction: row;
    height: 45px;
+   cursor: pointeer;
 }
 
 .left-main-icon-little{
