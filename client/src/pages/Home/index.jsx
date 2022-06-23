@@ -5,7 +5,7 @@ import { Header } from '../../components/Header/'
 import { LeftMain } from '../../components/LeftMain/'
 import { Content } from '../../components/Content/'
 
-export const Home = (props) => {
+export const Home = () => {
    const [iconDaVez, setIconDaVez] = useState("RiHome3Line")
    const [cor, setCor] = useState("#fff")   
    const [whatClassMain, setWhatClassMain] = useState("little")

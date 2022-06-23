@@ -5,7 +5,7 @@
    align-items: center;
    width: 55px;
    height: 100%;
-   transition: width .6s ease;
+   transition: width .5s ease;
 }
 
 .left-main-big{
@@ -17,7 +17,7 @@
    justify-content: flex-start;
    width: 170px;
    height: 100%;
-   transition: width .6s ease;
+   transition: width .5s ease;
 }
 
 .options-main-little{
@@ -28,7 +28,7 @@
    justify-content: center;
    cursor: pointer;      
    color: #fff;
-   transition: width .6s ease;
+   transition: width .5s ease;
 }
 
 .options-main-big{   
@@ -39,7 +39,7 @@
    justify-content: center;
    cursor: pointer;      
    color: #fff;
-   transition: width .6s ease;
+   transition: width .5s ease;
 }
 
 .options-main-little:hover, .options-main-little:focus {
@@ -76,7 +76,7 @@
    justify-content: center;
    align-items: center;   
    background: #525151;
-   transition: background 1s ease; 
+   transition: background .5s ease; 
 }
 
 .show-left-main-icon{
