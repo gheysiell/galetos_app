@@ -71,9 +71,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
-    -moz-transition: all .5s;      
+    transition: all .5s;
     background: #08D6A3;
 }
 
@@ -88,9 +86,7 @@
     top: 16px;
     left: 0px;
     padding-left: 5px;
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
-    -moz-transition: all .5s; 
+    transition: all .5s;
 }
 
 .input:focus{

@@ -1,34 +1,119 @@
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: orange;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: blue;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid orange;  /* creates padding around scroll thumb */
+}
+
+body {
+    scrollbar-width: thin;          /* "auto" or "thin" */
+    scrollbar-color: blue orange;   /* scroll thumb and track */
+}
+
 .content-table-pedido{
     flex-grow: 1;
-    flex-basis: auto;
-    padding: 10px 10px 10px 10px;
+    flex-basis: 0px;
+    padding: 0px 10px 0px 10px;
+    overflow-y: scroll;
 }
 
 .table-pedido{
     width: 100%;
     flex-grow: 1;
-    background-color: #fff;
-    border-radius: 4px;
+    background-color: #fff;    
     color: #000;
-    border: 1px solid #717171;
+    border-collapse: collapse;
+    border-bottom: 1px solid #C0C0C0;
 }
 
-.header-row-table-pedido{
-    background-color: #08D6A3;
+.header-row-table-pedido{    
     text-align: center;
-    height: 32px;
+    height: 40px;
+    background: #fff;
+    color: #000;
+    border: 1px solid #C0C0C0;
 }
 
-.data-row-table-pedido{
-    background-color: #08D6A3;
+.header-row-table-pedido th{
+    text-align: center;    
+    border-bottom: 2px solid #363636;    
+    border-left: 1px solid #C0C0C0;
+}
+
+.data-row-table-pedido{    
     text-align: center;   
-    height: 28px;
+    height: 36px;
+}
+
+.data-row-table-pedido td{
+    text-align: center;
+    border-right: 1px solid #C0C0C0;
+    border-left: 1px solid #C0C0C0;
 }
 
 .content-actions-table{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
     height: 100%;
+}
+
+.button-list-edit{
+    display: flex;
+    height: 26px;
+    width: 26px;
+    background: #0D6EFD;
+    border: 0 none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-list-edit:hover, .button-list-edit:focus{
+    box-shadow: 0 0 8px #0D6EFD;
+}
+
+.button-list-delete{
+    display: flex;
+    height: 26px;
+    width: 26px;
+    background: #DC3545;
+    border: 0 none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-list-delete:hover, .button-list-delete:focus{
+    box-shadow: 0 0 8px #DC3545;
+}
+
+.content-footer-pedido{
+    display: flex;
+    flex-grow: 0;
+    flex-basis: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2F7F8;
+    padding: 5px 5px 5px 5px;
+}
+
+.content-pagination{
+    display: flex;
+    background-color: #F2F7F8;
+    height: 100%;
+    width: 170px;
+    border: 1px solid red;    
 }
