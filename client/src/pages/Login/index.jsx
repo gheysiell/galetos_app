@@ -17,47 +17,45 @@ export const Login = () => {
    const [user, setUser] = useState("")
    const [password, setPassword] = useState("")
 
-   return (
-      <div className="container">
-         <div className="container-login">
+   return (      
+        <div className="container-login">
             <div className="wrap-login">
-               <form className="login-form">
-                  <div className="img-title-login">
-                     <img src={chickenImg} alt="galetos" style={{width: "50px"}}/>
-                  </div>
-                  <span className="login-form-title">
-                     Galetos pedido
-                  </span>
-                  <div className="wrap-input">
-                     <input 
+                <form className="login-form">
+                    <div className="img-title-login">
+                        <img src={chickenImg} alt="galetos" style={{width: "50px"}}/>
+                    </div>
+                    <span className="login-form-title">
+                        Galetos pedido
+                    </span>
+                    <div className="wrap-input">
+                        <input 
                         className={user !== "" ? 'has-val input' : 'input'}
                         type="email"
                         value={user}
                         onChange={e => setUser(e.target.value)}
-                     />
-                     <span className="focus-input" data-placeholder='Usuário'></span>
-                  </div>
-                  <div className="wrap-input">
-                     <input 
+                        />
+                        <span className="focus-input" data-placeholder='Usuário'></span>
+                    </div>
+                    <div className="wrap-input">
+                        <input 
                         className={password !== "" ? 'has-val input' : 'input'}
                         type="password"
                         value={password}
                         onChange={e => setPassword(e.target.value)}
                         />
-                     <span className="focus-input" data-placeholder='Senha'></span>
-                  </div>
-                  <div className="container-login-form-btn">
-                     <button 
+                        <span className="focus-input" data-placeholder='Senha'></span>
+                    </div>
+                    <div className="container-login-form-btn">
+                        <button 
                         className="login-form-btn"
                         onClick={validateLogin}
-                     >Login</button>
-                  </div>
-                  <div className="text-center">
-                     <Link className="txt2" to="/home">Esqueceu a senha ?</Link>
-                  </div>
-               </form>
+                        >Login</button>
+                    </div>
+                    <div className="text-center">
+                        <Link className="forgot-password" to="/home">Esqueceu a senha ?</Link>
+                    </div>
+                </form>
             </div>
-         </div>
-      </div>
+        </div>      
    )
 }

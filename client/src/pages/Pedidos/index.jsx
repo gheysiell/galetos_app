@@ -4,6 +4,10 @@ import { Header } from "../../components/Header"
 import { LeftMain } from "../../components/LeftMain"
 import { Content } from "../../components/Content"
 import { SearchBox } from '../../components/SearchBox'
+import { ButtonNovo } from '../../components/ButtonNovo'
+import { ContentHeaderBody } from '../../components/ContentHeaderBody'
+import { BiEdit } from 'react-icons/bi'
+import { BiTrash } from 'react-icons/bi'
 import "../../assets/css/pedidos.css"
 
 export const Pedidos = (props) => {
@@ -18,12 +22,37 @@ export const Pedidos = (props) => {
         {id: "4", description: "Cupim", quantidade: "5", preco: 12.52},
         {id: "5", description: "Costela", quantidade: "1", preco: 19.90}
     ]
-    const [contador, setContador] = useState(0)
     const pedidosList = pedidos.map((pedido) => {
-        <td>{pedido.id}</td>
-        /*<td>{pedido.description}</td>,
-        <td>{pedido.quantidade}</td>,
-        <td>{pedido.preco}</td>        */
+        return(
+            <tr className='data-row-table-pedido'>
+                <td>{pedido.id}</td>
+                <td>{pedido.description}</td>
+                <td>{pedido.quantidade}</td>
+                <td>{pedido.preco}</td>            
+                <td>
+                    <div className='content-actions-table'>
+                        <button 
+                            style={{height: "25px", width: "25px", background: "#0D6EFD",
+                                    border: "0 none", outline: "none", borderRadius: "4px", cursor: "pointer"}}
+                        >
+                            <BiEdit 
+                                style={{color: "#fff"}}
+                                size="23px"
+                            />
+                        </button>                        
+                        <button
+                            style={{height: "25px", width: "25px", background: "#DC3545",
+                                    border: "0 none", outline: "none", borderRadius: "4px", cursor: "pointer"}}
+                        >
+                            <BiTrash
+                                style={{color: "#fff"}}
+                                size="23px"
+                            />
+                        </button>
+                    </div>
+                </td>            
+            </tr>
+        )
     })
 
     const changeColorActive = (optionClicked) => {
@@ -67,25 +96,23 @@ export const Pedidos = (props) => {
             />
             <Content
                 whatClassMain={whatClassMain}
-            >
-                <button 
-                    className='btn-new' 
-                    onClick={() => setContador(contador+1)}                
-                >
-                Novo
-                </button>
-                <SearchBox/>
-                <table>
-                    <tr>
-                        <th>id</th>
-                        <th>descrição</th>
-                        <th>quantidade</th>
-                        <th>preço</th>
-                    </tr>
-                    <tr>
-                        {pedidosList}
-                    </tr>
-                </table>
+            >                                                          
+                <ContentHeaderBody>
+                    <ButtonNovo/>
+                    <SearchBox/>
+                </ContentHeaderBody>
+                <div className="content-table-pedido">
+                    <table className="table-pedido">
+                        <tr className='header-row-table-pedido'>
+                            <th>ID</th>
+                            <th>Descrição</th>
+                            <th>Quantidade</th>
+                            <th>Preço</th>
+                            <th>Ações</th>
+                        </tr> 
+                        {pedidosList} 
+                    </table>
+                </div>
             </Content>
         </div>
     )

@@ -1,10 +1,7 @@
-.content-search{
-   position: absolute;
+.content-search{   
    display: flex;
    flex-direction: row;
-   right: 10px;
-   top: 10px;
-   height: 32px;
+   height: 33px;
    width: 230px;
    border: 2px solid #08D6A3;
    border-radius: 4px;

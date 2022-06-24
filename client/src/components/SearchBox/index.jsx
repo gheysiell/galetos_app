@@ -6,7 +6,7 @@ export function SearchBox() {
     const [focused, setFocused] = useState(false)
 
     useEffect(() => {
-        alert(focused ? "focused" : "non focused")
+        //alert(focused ? "focused" : "non focused")
     })
 
     return(
