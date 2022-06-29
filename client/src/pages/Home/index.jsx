@@ -8,7 +8,7 @@ import { Container } from '../../components/Container'
 
 export const Home = () => {
     const [iconDaVez, setIconDaVez] = useState("RiHome3Line")
-    const [cor, setCor] = useState("#fff")   
+    const [cor, setCor] = useState("#fff")
     const [whatClassMain, setWhatClassMain] = useState("little")
     const navigate = useNavigate()
 

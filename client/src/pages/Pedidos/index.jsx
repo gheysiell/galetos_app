@@ -16,6 +16,22 @@ export const Pedidos = (props) => {
     const [cor, setCor] = useState("#fff")   
     const [whatClassMain, setWhatClassMain] = useState("big")
     const navigate = useNavigate()
+    const pages = [
+        {'number': '<<'}, 
+        {'number': '<'}, 
+        {'number': 3}, 
+        {'number': 4}, 
+        {'number': 5},
+        {'number': '>'},
+        {'number': '>>'}
+    ]
+    const quantPage = pages.map((page) => {
+        return(
+            <div className='pagination-boxes'>
+                <span>{page.number}</span>
+            </div>
+        )
+    })
     const pedidos = [
         {id: "1", description: "Arroz", quantidade: 3, preco: 25.56},
         {id: "2", description: "Feijao", quantidade: 2, preco: 18.94},
@@ -120,6 +136,7 @@ export const Pedidos = (props) => {
                 </div>
                 <div className='content-footer-pedido'>
                     <div className='content-pagination'>
+                        {quantPage}
                     </div>
                 </div>
             </Content>

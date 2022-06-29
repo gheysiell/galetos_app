@@ -23,7 +23,7 @@ export const LeftMain = (props) => {
                className={ props.whatClassMain === "little" ? "options-main-little" : "options-main-big" }
                onClick={() => {props.changeColorActive("RiHome3Line")}}
             >
-               <RiHome3Line size="27px" style={{color: props.iconDaVez === "RiHome3Line" ? props.cor : "#fff"}}/>
+               <RiHome3Line size="27px"/>
             </div>
             <div
                className={ props.whatClassMain === "little" ? "hidden" : "show-options-names" }
@@ -36,10 +36,10 @@ export const LeftMain = (props) => {
             onClick={() => props.navigate('/pedidos')}
          >
             <div 
-               className={ props.whatClassMain === "little" ? props.iconDaVez === "RiCouponLine" ? "options-main-little selected-option" : "options-main-little inactive-option" : props.iconDaVez === "RiCouponLine" ? "options-main-big selected-option" : "options-main-big inactive-option" }
+               className={ props.whatClassMain === "little" ? props.iconDaVez === "RiCouponLine" ? "options-main-little " : "options-main-little " : props.iconDaVez === "RiCouponLine" ? "options-main-big " : "options-main-big " }
                onClick={() => props.changeColorActive("RiCouponLine")}
             >
-               <RiCouponLine size="27px" style={{color: props.cor}}/>
+               <RiCouponLine size="27px"/>
             </div>
             <div
                className={ props.whatClassMain === "little" ? "hidden" : "show-options-names" }
@@ -49,7 +49,7 @@ export const LeftMain = (props) => {
          </div>
          <div className={props.whatClassMain === "little" ? "container-options-main-little" : "container-options-main-big"}>
             <div 
-               className={ props.whatClassMain === "little" ? props.iconDaVez === "AiOutlineUsergroupAdd" ? "options-main-little selected-option" : "options-main-little inactive-option" : props.iconDaVez === "AiOutlineUsergroupAdd" ? "options-main-big selected-option" : "options-main-big inactive-option" }
+               className={ props.whatClassMain === "little" ? props.iconDaVez === "AiOutlineUsergroupAdd" ? "options-main-little " : "options-main-little " : props.iconDaVez === "AiOutlineUsergroupAdd" ? "options-main-big " : "options-main-big " }
                onClick={() => props.changeColorActive("AiOutlineUsergroupAdd")}
             >
                <FiBox size="27px"/>
@@ -62,7 +62,7 @@ export const LeftMain = (props) => {
          </div>
          <div className={props.whatClassMain === "little" ? "container-options-main-little" : "container-options-main-big"}>
             <div 
-               className={ props.whatClassMain === "little" ? props.iconDaVez === "AiOutlineUsergroupAdd" ? "options-main-little selected-option" : "options-main-little inactive-option" : props.iconDaVez === "AiOutlineUsergroupAdd" ? "options-main-big selected-option" : "options-main-big inactive-option" }
+               className={ props.whatClassMain === "little" ? props.iconDaVez === "AiOutlineUsergroupAdd" ? "options-main-little " : "options-main-little " : props.iconDaVez === "AiOutlineUsergroupAdd" ? "options-main-big " : "options-main-big " }
                onClick={() => props.changeColorActive("AiOutlineUsergroupAdd")}
             >
                <AiOutlineUsergroupAdd size="27px"/>
@@ -75,7 +75,7 @@ export const LeftMain = (props) => {
          </div>  
          <div className={props.whatClassMain === "little" ? "container-options-main-little" : "container-options-main-big"}>
             <div 
-               className={props.whatClassMain === "little" ? props.iconDaVez === "RiInformationLine" ? "options-main-little selected-option" : "options-main-little inactive-option" : props.iconDaVez === "RiInformationLine" ? "options-main-big selected-option" : "options-main-big inactive-option" }
+               className={props.whatClassMain === "little" ? props.iconDaVez === "RiInformationLine" ? "options-main-little " : "options-main-little " : props.iconDaVez === "RiInformationLine" ? "options-main-big " : "options-main-big " }
                onClick={() => props.changeColorActive("RiInformationLine")}
             >
                <RiInformationLine size="27px"/>
@@ -89,7 +89,7 @@ export const LeftMain = (props) => {
          <div className="options-main-bottom">
             <div className={props.whatClassMain === "little" ? "container-options-main-little" : "container-options-main-big"}>
                <div 
-                  className={props.whatClassMain === "little" ? props.iconDaVez === "RiSettings3Line" ? "options-main-little selected-option" : "options-main-little inactive-option" : props.iconDaVez === "RiSettings3Line" ? "options-main-big selected-option" : "options-main-big inactive-option" }
+                  className={props.whatClassMain === "little" ? props.iconDaVez === "RiSettings3Line" ? "options-main-little " : "options-main-little " : props.iconDaVez === "RiSettings3Line" ? "options-main-big " : "options-main-big " }
                   onClick={() => props.changeColorActive("RiSettings3Line")}
                >
                   <RiSettings3Line size="27px"/>
@@ -102,7 +102,7 @@ export const LeftMain = (props) => {
             </div>
             <div className={props.whatClassMain === "little" ? "container-options-main-little" : "container-options-main-big"}>
                <div 
-                  className={props.whatClassMain === "little" ? props.iconDaVez === "RiLogoutCircleRLine" ? "options-main-little selected-option" : "options-main-little inactive-option" : props.iconDaVez === "RiLogoutCircleRLine" ? "options-main-big selected-option" : "options-main-big inactive-option" }
+                  className={props.whatClassMain === "little" ? props.iconDaVez === "RiLogoutCircleRLine" ? "options-main-little " : "options-main-little " : props.iconDaVez === "RiLogoutCircleRLine" ? "options-main-big " : "options-main-big " }
                   onClick={() => props.changeColorActive("RiLogoutCircleRLine")}
                >
                   <RiLogoutCircleRLine size="24px" onClick={props.logOut}/>
