@@ -9,6 +9,7 @@ import { ContentHeaderBody } from '../../components/ContentHeaderBody'
 import { Container } from '../../components/Container'
 import { BiEdit } from 'react-icons/bi'
 import { BiTrash } from 'react-icons/bi'
+import { ModalCadastro } from '../../components/ModalCadastro'
 import "../../assets/css/pedidos.css"
 
 export const Pedidos = (props) => {
@@ -36,7 +37,7 @@ export const Pedidos = (props) => {
         {id: "1", description: "Arroz", quantidade: 3, preco: 25.56},
         {id: "2", description: "Feijao", quantidade: 2, preco: 18.94},
         {id: "3", description: "Frango", quantidade: 3, preco: 45.05},
-        {id: "4", description: "Cupim", quantidade: 5, preco: 12.52},
+{id: "4", description: "Cup im", quantidade: 5, preco: 12.52},
         {id: "5", description: "Costela", quantidade: 1, preco: 19.90},
         {id: "6", description: "Galetos", quantidade: 1, preco: 78.93},
         {id: "7", description: "Coxinha", quantidade: 3, preco: 43.12},
@@ -139,7 +140,8 @@ export const Pedidos = (props) => {
                         {quantPage}
                     </div>
                 </div>
-            </Content>
+            </Content>            
+            <ModalCadastro/>            
         </Container>
     )
 }
