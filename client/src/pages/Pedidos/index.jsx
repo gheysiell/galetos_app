@@ -12,10 +12,12 @@ import { BiTrash } from 'react-icons/bi'
 import { ModalCadastro } from '../../components/ModalCadastro'
 import "../../assets/css/pedidos.css"
 
-export const Pedidos = (props) => {
+export const Pedidos = () => {
     const [iconDaVez, setIconDaVez] = useState("RiHome3Line")
     const [cor, setCor] = useState("#fff")   
     const [whatClassMain, setWhatClassMain] = useState("big")
+    const [modalVisible, setModalVisible] = useState(false)
+    
     const navigate = useNavigate()
     const pages = [
         {'number': '<<'}, 
@@ -37,7 +39,7 @@ export const Pedidos = (props) => {
         {id: "1", description: "Arroz", quantidade: 3, preco: 25.56},
         {id: "2", description: "Feijao", quantidade: 2, preco: 18.94},
         {id: "3", description: "Frango", quantidade: 3, preco: 45.05},
-{id: "4", description: "Cup im", quantidade: 5, preco: 12.52},
+        {id: "4", description: "Cup im", quantidade: 5, preco: 12.52},
         {id: "5", description: "Costela", quantidade: 1, preco: 19.90},
         {id: "6", description: "Galetos", quantidade: 1, preco: 78.93},
         {id: "7", description: "Coxinha", quantidade: 3, preco: 43.12},
@@ -97,9 +99,9 @@ export const Pedidos = (props) => {
         navigate('/')
     }
 
-    useEffect(() => {
-        //alert("here")
-    })
+    const modalVisibility = () => {
+        modalVisible === true ? setModalVisible(false) : setModalVisible(true)
+    }
 
     return (
         <Container>
@@ -120,7 +122,10 @@ export const Pedidos = (props) => {
                 whatClassMain={whatClassMain}
             >                                                          
                 <ContentHeaderBody>
-                    <ButtonNovo/>
+                    <ButtonNovo
+                        setModalVisible={() => modalVisibility()}
+                        modalVisible={modalVisible}  
+                    />
                     <SearchBox/>
                 </ContentHeaderBody>
                 <div className='content-table-pedido'>
@@ -141,7 +146,10 @@ export const Pedidos = (props) => {
                     </div>
                 </div>
             </Content>            
-            <ModalCadastro/>            
+            <ModalCadastro
+                setModalVisible={() => modalVisibility()}
+                modalVisible={modalVisible}               
+            />
         </Container>
     )
 }

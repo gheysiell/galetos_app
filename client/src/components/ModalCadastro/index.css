@@ -1,4 +1,4 @@
-.modal-container{
+.modal-container-visible, .modal-container-in-visible{
     position: absolute;
     display: flex;
     width: 100%;
@@ -6,6 +6,13 @@
     background: rgba(0, 0, 0, 0.5);
     align-items: center;
     justify-content: center;
+    opacity: 1;    
+    transition: opacity .2s ease;
+}
+
+.modal-container-in-visible{
+    opacity: 0;
+    pointer-events: none;
 }
 
 .modal-window{
@@ -14,9 +21,8 @@
     background: #fff;
     border-radius: 16px;        
     width: 90%;
-    height: 90%;
-    max-width: 700px;
-    max-height: 500px;
+    height: 550px;
+    max-width: 800px;    
     flex-direction: column;
     padding: 5px;
     box-shadow: 0px 0px 5px #525252;
@@ -84,12 +90,26 @@
 
 .main-inputs{
     display: flex;
-    border-radius: 4px;
+    border-radius: 3px;
     flex-direction: column;
     height: 28px;
-    width: 120px;
+    width: 100%;
+    border: 1px solid #707070;
+    padding: 3px;
+    outline: none;
 }    
+
+.main-inputs:focus, .main-inputs:hover, .main-inputs::selection {
+    border: 1px solid #01BFED;
+    background-color: #ecfffa;
+}
 
 .content-datas{
     height: 60px;
+    padding: 5px;
+}
+
+#sel-products{
+    font-size: 15px;
+    width: 100%;
 }
