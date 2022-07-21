@@ -8,7 +8,7 @@ export const LeftMain = (props) => {
    return (
       <div className={props.whatClassMain === "little" ? "left-main-little" : "left-main-big"}>
          <div className={props.whatClassMain === "little" ? "left-main-icon-little" : "left-main-icon-big"}>
-            <img src={chickenImg} style={{width: "40px"}}/>
+            <img src={chickenImg} style={{width: "40px"}} alt=""/>
             <h2
                className={props.whatClassMain === "little" ? "hidden" : "show-left-main-icon"}
             >

@@ -1,26 +1,35 @@
 .content-table-pedido::-webkit-scrollbar {
-    width: 15px;    
+    width: 10px;
+    border: 1px solid #000;
 }
 
 .content-table-pedido::-webkit-scrollbar-track {
-    background: #e0e0e0;    
+    background: #f0f0f0;    
+}
+
+.content-table-pedido::-webkit-scrollbar-track:hover {
+    background: #d8d8d8;  
 }
 
 .content-table-pedido::-webkit-scrollbar-thumb {
-    background-color: #08D6A3;    
-    border: 2px solid #e0e0e0;      
+    background: #CCCCCC;
+    border: 1px solid #bdbdbd;     
+}
+
+.content-table-pedido::-webkit-scrollbar-thumb:hover {        
+    background: #9c9c9c;
+    border: 0 none;
+    outline: none;
 }
 
 .content-table-pedido{
-    scrollbar-width: thin;          
-    scrollbar-color: #08D6A3 #e0e0e0;       
-}
-
-.content-table-pedido{
+    scrollbar-width: thin;
     flex-grow: 1;
     flex-basis: 0px;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 0px 0px 10px;
     overflow-y: scroll;
+    width: auto;
+    margin-right: 10px;
 }
 
 .table-pedido{

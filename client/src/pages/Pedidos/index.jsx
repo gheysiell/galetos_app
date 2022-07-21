@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Header } from "../../components/Header"
 import { LeftMain } from "../../components/LeftMain"
 import { Content } from "../../components/Content"
