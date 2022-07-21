@@ -1,23 +1,23 @@
 const db = require('./index')
 
-const model_pedidos = db.galetos.define('pedidos', {
+const model_log_errors = db.galetos.define('log_errors', {
     id: {
         type: db.DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
     },
-    status: db.DataTypes.BOOLEAN,
-    name: db.DataTypes.STRING
+    error_message: db.DataTypes.STRING,
+    date: db.DataTypes.DATE
 }, {
     freezeTableName: true,
     timestamps: false
 })
 
 async function synchronizeModel() {
-    await model_pedidos.sync()
-    .then(() => console.log("Table pedidos sincronized."))
+    await model_log_errors.sync()
+    .then(() => console.log("Table log_errors sincronized."))
     .catch(err => console.log(`Error: ${err}`))
 }
 synchronizeModel()
 
-module.exports = model_pedidos
+module.exports = model_log_errors

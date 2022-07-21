@@ -1,13 +1,15 @@
-const Sequelize = require('sequelize')
+const { Sequelize, DataTypes } = require('sequelize')
 const config = require('../config')
 
-const sequelize = new Sequelize(config.db_name, config.db_user, config.db_pass, {
+const galetos = new Sequelize(config.db_name, config.db_user, config.db_pass, {
     host: config.db_host,
     dialect: 'mysql'
 })
+galetos.authenticate()
+.then(() => console.log('Connected in galetos db'))
+.catch(err => console.log(`Error: ${err}`))
 
-sequelize.authenticate()
-.then(() => console.log('conectado com sucesso!'))
-.catch(err => console.log("Erro: "+err))
-
-module.exports = { sequelize: sequelize, Sequelize: Sequelize }
+module.exports = { 
+    galetos,
+    DataTypes
+}
